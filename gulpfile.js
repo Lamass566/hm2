@@ -6,6 +6,7 @@ const sass = require("gulp-sass")(require('sass'));
 const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
 const fileinclude = require("gulp-file-include");
+const minJs = require("gulp-minify");
 
 function browserServe(stop){
     browsersync.init({
@@ -32,7 +33,7 @@ function browserReload(){
 
 function css(stop){
     gulp.src('./src/**/*.scss')
-    .pipe(concat('mainMain.min.scss'))
+    .pipe(concat('styles.min.scss'))
     .pipe(sass().on("error", sass.logError))
     .pipe(mincss())
     .pipe(autoprefix())
@@ -43,7 +44,8 @@ function css(stop){
 
 function js(){
     return gulp.src('./src/js/*.js')
-    .pipe(concat('MainJs.min.js'))
+    .pipe(concat('scripts.min.js'))
+    .pipe(minJs())
     .pipe(gulp.dest('./dist/js'))
 }
 
