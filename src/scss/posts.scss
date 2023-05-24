@@ -1,0 +1,152 @@
+@mixin roboto-700 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+
+    color: #4E4E4E;
+}
+
+@mixin roboto-400{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+
+color: #7C7C7C;
+}
+
+.posts--title{
+    @include roboto-700;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.section__posts{
+    padding-top: 38px;
+
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+@media(min-width: 768px) {
+    .section__posts{
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 60px;
+    }
+}
+
+.post__title{
+    @include roboto-700;
+}
+
+.post__text{
+    @include roboto-400;
+line-height: 20px;
+
+}
+
+.post__img{
+    padding-top: 23px;
+    padding-bottom: 11px;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+}
+
+.post__content{
+    @include roboto-400;
+line-height: 26px;
+width: 400px;
+
+color: #5C5C5C;
+
+    display: none;
+}
+
+#post--hidden{
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .post{
+        flex-direction: row;
+    }
+
+    .post__content{
+        display: block;
+    }
+
+    .flex-block-2{
+        padding-left: 21px;
+    }
+
+    #post--hidden{
+        display: inline-flex;
+    }
+}
+
+@media(min-width: 1200px) {
+    .flex--posts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .post__content{
+        width: 0px;
+        min-width: 333px;
+    }
+}
+
+.post__element--hidden{
+    display: none;
+}
+
+.header__menu--hidden{
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .header__menu--hidden{
+        display: block;
+    }
+}
+
+.header__menu__list{
+    list-style-type:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 41px;
+    margin-left: 164px;
+    margin-right: 164px;
+    padding-bottom: 41px;
+    // gap: 8px;
+}
+
+.menu__item{
+    
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 22px;
+box-sizing: border-box;
+align-items: center;
+text-transform: uppercase;
+white-space:nowrap;
+color: #4E4E4E;
+}
+
+a{
+    color: #4E4E4E;
+    text-decoration: none
+}
+
+a:focus{
+    color: #57A4A4;
+}

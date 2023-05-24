@@ -1,0 +1,32 @@
+.wrapper{
+    min-width: 320px;
+}
+
+.section__bg-320px{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.bg-320px{
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 28px;
+}
+
+@media(min-width: 768px) {
+    .bg-320px{
+        margin-top: 0px;
+    }
+}
+
+@media(min-width: 768px) {
+    .wrapper{
+        min-width: 768px;
+    }
+
+    .section__bg-320px{
+        margin-left: 80px;
+    margin-right: 80px;
+    }
+}
+
